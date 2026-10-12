@@ -59,3 +59,81 @@ document.getElementById("donate-btn-3").addEventListener("click", function () {
 
 
 })
+// togoling part
+const donationTab = document.getElementById("donation-tab");
+const historyTab = document.getElementById("history-tab");
+
+const donationSection = document.getElementById("donation-section");
+const historySection = document.getElementById("history-section");
+
+// History tab
+historyTab.addEventListener("click", function () {
+    historyTab.classList.add(
+        'bg-[#b4f461]',
+        'hover:bg-[#a4e84d]',
+        'border-none',
+        'text-black'
+    );
+
+    historyTab.classList.remove(
+        'bg-white',
+        'hover:bg-gray-100',
+        'border',
+        'border-gray-300',
+        'text-gray-600'
+    );
+
+    donationTab.classList.remove(
+        'bg-[#b4f461]',
+        'hover:bg-[#a4e84d]',
+        'border-none',
+        'text-black'
+    );
+
+    donationTab.classList.add(
+        'bg-white',
+        'hover:bg-gray-100',
+        'border',
+        'border-gray-300',
+        'text-gray-600'
+    );
+
+    donationSection.classList.add("hidden");
+    historySection.classList.remove("hidden");
+});
+
+// Donation tab
+donationTab.addEventListener("click", function () {
+    donationTab.classList.add(
+        'bg-[#b4f461]',
+        'hover:bg-[#a4e84d]',
+        'border-none',
+        'text-black'
+    );
+
+    donationTab.classList.remove(
+        'bg-white',
+        'hover:bg-gray-100',
+        'border',
+        'border-gray-300',
+        'text-gray-600'
+    );
+
+    historyTab.classList.remove(
+        'bg-[#b4f461]',
+        'hover:bg-[#a4e84d]',
+        'border-none',
+        'text-black'
+    );
+
+    historyTab.classList.add(
+        'bg-white',
+        'hover:bg-gray-100',
+        'border',
+        'border-gray-300',
+        'text-gray-600'
+    );
+
+    donationSection.classList.remove("hidden");
+    historySection.classList.add("hidden");
+});
