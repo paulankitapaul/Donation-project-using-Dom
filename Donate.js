@@ -17,6 +17,24 @@ document.getElementById("donate-btn-1").addEventListener("click", function () {
     document.getElementById("balance").innerText = newBalance;
     alert("Donation Successfully Done");
 
+    const historyContainer = document.getElementById("history-container")
+    const noaKhaliheading = document.getElementById("noakhali-heading")
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+    
+<div class="w-full border border-gray-200 bg-white px-3 py-5">
+  <h3 class="text-sm font-bold text-gray-900">
+    ${newInput} Taka is ${noaKhaliheading.innerText}
+  </h3>
+
+  <p class="mt-3 text-[11px] text-gray-500">
+    Date : ${new Date()}
+  </p>
+</div>
+
+    `
+    historyContainer.appendChild(newDiv)
+
 
 })
 // donate card -02
@@ -38,6 +56,25 @@ document.getElementById("donate-btn-2").addEventListener("click", function () {
     alert("Donation Successfully Done");
 
 
+    const historyContainer = document.getElementById("history-container")
+    const feniHeading = document.getElementById("feni-heading")
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+    
+<div class="w-full border border-gray-200 bg-white px-3 py-5">
+  <h3 class="text-sm font-bold text-gray-900">
+    ${newInput2} Taka is ${feniHeading.innerText}
+  </h3>
+
+  <p class="mt-3 text-[11px] text-gray-500">
+    Date : ${new Date()}
+  </p>
+</div>
+
+    `
+    historyContainer.appendChild(newDiv)
+
+
 })
 // donate card -03
 document.getElementById("donate-btn-3").addEventListener("click", function () {
@@ -56,6 +93,25 @@ document.getElementById("donate-btn-3").addEventListener("click", function () {
     console.log(newBalance);
     document.getElementById("balance").innerText = newBalance;
     alert("Donation Successfully Done");
+
+
+    const historyContainer = document.getElementById("history-container")
+    const quotaHeading = document.getElementById("quota-heading")
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+    
+<div class="w-full border border-gray-200 bg-white px-3 py-5">
+  <h3 class="text-sm font-bold text-gray-900">
+    ${newInput3} Taka ${quotaHeading.innerText}
+  </h3>
+
+  <p class="mt-3 text-[11px] text-gray-500">
+    Date : ${new Date()}
+  </p>
+</div>
+
+    `
+    historyContainer.appendChild(newDiv)
 
 
 })
@@ -137,3 +193,7 @@ donationTab.addEventListener("click", function () {
     donationSection.classList.remove("hidden");
     historySection.classList.add("hidden");
 });
+// Blog clickable
+document.getElementById("blog-btn").addEventListener("click", function () {
+    window.location.href = '/home.html'
+})
