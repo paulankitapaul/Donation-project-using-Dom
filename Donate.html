@@ -34,10 +34,10 @@
             <div class="max-w-5xl mx-auto flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center">
 
                 <!-- Blog Button -->
-                    <button id="blog-btn" class="btn bg-[#b4f461] hover:bg-[#a4e84d] border-none text-black px-7">
-                        Blog
-                    </button>
-                
+                <button id="blog-btn" class="btn bg-[#b4f461] hover:bg-[#a4e84d] border-none text-black px-7">
+                    Blog
+                </button>
+
 
                 <!-- Logo and Title -->
                 <div class="flex items-center gap-3">
@@ -281,7 +281,23 @@
             </div>
 
         </section>
+        <!-- modal -->
+        <div id="success-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
 
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+
+                <img src="./assets/coin.png" alt="Coin" class="w-16 mx-auto mb-3">
+
+                <h2 class="text-xl font-bold text-green-600">
+                    Successfully Done!
+                </h2>
+
+                <button id="close-btn" class="btn mt-4">
+                    Close
+                </button>
+
+            </div>
+        </div>
     </main>
 
 

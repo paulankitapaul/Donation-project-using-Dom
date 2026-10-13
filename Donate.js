@@ -1,4 +1,12 @@
 // donate card -01
+// Success Modal
+const successModal = document.getElementById("success-modal");
+const closeBtn = document.getElementById("close-btn");
+
+closeBtn.addEventListener("click", function () {
+    successModal.classList.add("hidden");
+});
+
 document.getElementById("donate-btn-1").addEventListener("click", function () {
     const inputValue1 = Number(document.getElementById("donation-input-1").value);
     const donationValue1 = Number(document.getElementById("donation-amount-1").innerText);
@@ -15,8 +23,8 @@ document.getElementById("donate-btn-1").addEventListener("click", function () {
 
     console.log(newBalance);
     document.getElementById("balance").innerText = newBalance;
-    alert("Donation Successfully Done");
-
+    successModal.classList.remove("hidden");
+    document.getElementById("donation-input-1").value = "";
     const historyContainer = document.getElementById("history-container")
     const noaKhaliheading = document.getElementById("noakhali-heading")
     const newDiv = document.createElement("div");
@@ -53,7 +61,8 @@ document.getElementById("donate-btn-2").addEventListener("click", function () {
     const newBalance = balanceValue - newInput2;
     console.log(newBalance);
     document.getElementById("balance").innerText = newBalance;
-    alert("Donation Successfully Done");
+    successModal.classList.remove("hidden");
+    document.getElementById("donation-input-2").value = "";
 
 
     const historyContainer = document.getElementById("history-container")
@@ -92,7 +101,8 @@ document.getElementById("donate-btn-3").addEventListener("click", function () {
     const newBalance = balanceValue - newInput3;
     console.log(newBalance);
     document.getElementById("balance").innerText = newBalance;
-    alert("Donation Successfully Done");
+     successModal.classList.remove("hidden");
+    document.getElementById("donation-input-3").value = "";
 
 
     const historyContainer = document.getElementById("history-container")
