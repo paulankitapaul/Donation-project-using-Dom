@@ -6,11 +6,22 @@ const closeBtn = document.getElementById("close-btn");
 closeBtn.addEventListener("click", function () {
     successModal.classList.add("hidden");
 });
+// Common function
+function getValueById(id){
+    const inputValue = document.getElementById(id).value ;
+    return Number(inputValue)
+    
+}
+function getInnerText(id){
+    const innerTextElement = document.getElementById(id).innerText;
+    return Number(innerTextElement);
+}
 
 document.getElementById("donate-btn-1").addEventListener("click", function () {
-    const inputValue1 = Number(document.getElementById("donation-input-1").value);
-    const donationValue1 = Number(document.getElementById("donation-amount-1").innerText);
-    const balanceValue1 = Number(document.getElementById("balance").innerText)
+    const inputValue1 = getValueById("donation-input-1")
+    
+    const donationValue1 = getInnerText("donation-amount-1");
+    const balanceValue1 = getInnerText("balance")
     console.log(inputValue1, donationValue1, balanceValue1);
     if (inputValue1 <= 0 || inputValue1 > balanceValue1) {
         alert("Enter a vaild Number");
@@ -20,8 +31,6 @@ document.getElementById("donate-btn-1").addEventListener("click", function () {
     (document.getElementById("donation-amount-1").innerText) = newInput
     console.log(typeof (donationValue1));
     const newBalance = balanceValue1 - newInput;
-
-    console.log(newBalance);
     document.getElementById("balance").innerText = newBalance;
     successModal.classList.remove("hidden");
     document.getElementById("donation-input-1").value = "";
@@ -47,9 +56,10 @@ document.getElementById("donate-btn-1").addEventListener("click", function () {
 })
 // donate card -02
 document.getElementById("donate-btn-2").addEventListener("click", function () {
-    const inputValue2 = Number(document.getElementById("donation-input-2").value);
-    const donationValue2 = Number(document.getElementById("donation-amount-2").innerText);
-    const balanceValue = Number(document.getElementById("balance").innerText)
+    const inputValue2 = getValueById("donation-input-2")
+    
+    const donationValue2 = getInnerText("donation-amount-2");
+    const balanceValue = getInnerText("balance")
     console.log(inputValue2, donationValue2, balanceValue);
     if (inputValue2 <= 0 || inputValue2 > balanceValue) {
         alert("Enter a vaild Number");
@@ -87,9 +97,10 @@ document.getElementById("donate-btn-2").addEventListener("click", function () {
 })
 // donate card -03
 document.getElementById("donate-btn-3").addEventListener("click", function () {
-    const inputValue3 = Number(document.getElementById("donation-input-3").value);
-    const donationValue3 = Number(document.getElementById("donation-amount-3").innerText);
-    const balanceValue = Number(document.getElementById("balance").innerText)
+    const inputValue3 = getValueById("donation-input-3")
+    
+    const donationValue3 = getInnerText("donation-amount-3");
+    const balanceValue = getInnerText("balance")
     console.log(inputValue3, donationValue3, balanceValue);
     if (inputValue3 <= 0 || inputValue3 > balanceValue) {
         alert("Enter a vaild Number");
